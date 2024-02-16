@@ -32,7 +32,7 @@ Current OTEL support is Tech Preview, JSON over HTTP only.
 	if null != container_image_slice[1] { .resources.container.image.tag = container_image_slice[1] }
 	del(.kubernetes.container_image)
 
-	# kuberenetes
+	# kubernetes
 	.resources.k8s.pod.name = del(.kubernetes.pod_name)
 	.resources.k8s.pod.uid = del(.kubernetes.pod_id)
 	.resources.k8s.pod.ip = del(.kubernetes.pod_ip)
