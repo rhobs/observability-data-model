@@ -81,7 +81,7 @@ The "Storage" column shows whether the attribute is stored into a LokiStack usin
 | `k8s.deployment.name` | resource | container | stream label | Conditionally forwarded based on creator of Pod |
 | `k8s.job.name` | resource | container | stream label | Conditionally forwarded based on creator of Pod |
 | `k8s.replicaset.name` | resource | container | structured metadata | Conditionally forwarded based on creator of Pod |
-| `k8s.statefulset.name` | resource | container | structured metadata | Conditionally forwarded based on creator of Pod |
+| `k8s.statefulset.name` | resource | container | stream label | Conditionally forwarded based on creator of Pod |
 | `log.iostream` | log | container | structured metadata | |
 | `k8s.audit.event.level` | log | audit | structured metadata | |
 | `k8s.audit.event.stage` | log | audit | structured metadata | |
