@@ -66,6 +66,7 @@ The "Storage" column shows whether the attribute is stored into a LokiStack usin
 | `kubernetes.namespace_name` | resource | container | required stream label | **(DEPRECATED)** Compatibility attribute, contains same information as `k8s.namespace.name` |
 | `kubernetes.pod_name` | resource | container | stream label | **(DEPRECATED)** Compatibility attribute, contains same information as `k8s.pod.name` |
 | `openshift.cluster_id` | resource | all | | **(DEPRECATED)** Compatibility attribute, contains same information as `openshift.cluster.uid` |
+| `level` | log | container, journal | | **(DEPRECATED)** Compatibility attribute, contains same information as `severityText` |
 | `openshift.cluster.uid` | resource | all | required stream label | |
 | `openshift.log.source` | resource | all | required stream label | |
 | `openshift.log.type` | resource | all | required stream label | |
