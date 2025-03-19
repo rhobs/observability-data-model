@@ -70,11 +70,11 @@ The "Storage" column shows whether the attribute is stored into a LokiStack usin
 | `openshift.cluster.uid` | resource | all | required stream label | |
 | `openshift.log.source` | resource | all | required stream label | |
 | `openshift.log.type` | resource | all | required stream label | |
-| `openshift.labels.*` | resource | all | structured metadata | |
+| `openshift.label.*` | resource | all | structured metadata | |
 | `k8s.node.name` | resource | all | stream label | |
 | `k8s.namespace.name` | resource | container | required stream label | |
 | `k8s.container.name` | resource | container | stream label | |
-| `k8s.pod.labels.*` | resource | container | structured metadata | |
+| `k8s.pod.label.*` | resource | container | structured metadata | |
 | `k8s.pod.name` | resource | container | stream label | |
 | `k8s.pod.uid` | resource | container | structured metadata | |
 | `k8s.cronjob.name` | resource | container | stream label | Conditionally forwarded based on creator of Pod |
