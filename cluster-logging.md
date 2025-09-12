@@ -81,17 +81,27 @@ The "Storage" column shows whether the attribute is stored into a LokiStack usin
 | `k8s.replicaset.name` | resource | container | structured metadata | Conditionally forwarded based on creator of Pod |
 | `k8s.statefulset.name` | resource | container | stream label | Conditionally forwarded based on creator of Pod |
 | `log.iostream` | log | container | structured metadata | |
+| `log.sequence` | log | all | structured metadata | Conditionally forwarded when available|
 | `process.executable.name` | resource | journal | structured metadata | |
 | `process.executable.path` | resource | journal | structured metadata | |
 | `process.command_line` | resource | journal | structured metadata | |
 | `process.pid` | resource | journal | structured metadata | |
 | `service.name` | resource | journal | stream label | |
-| `systemd.t.*` | log | journal | structured metadata | |
-| `systemd.u.*` | log | journal | structured metadata | |
+| `k8s.ovn.component` | resource | ovn | stream label | |
+| `auditd.type` | log | auditd | structured metadata | The type of auditd event (e.g., `SYSCALL`, `PROCTITLE`) |
 
 **Note:** Attributes marked as "Compatibility attribute" are added to support minimal backwards compatibility with the [ViaQ](https://github.com/openshift/cluster-logging-operator/blob/release-6.0/docs/reference/datamodels/viaq/v1.adoc) data model. These attributes should be considered deprecated and will be removed one release after **General Acceptance** of Red Hat OpenShift Logging.
 
 **Note:** Attributes starting with `openshift.` are openshift logging extensions, not (yet) part of the OTEL spec.
+
+**Note:** The "Applicable Sources" column defines which log sources this attribute applies:
+
+* `all` is attributes that are present for all logs
+* `audit` is attributes that are present for Kubernetes API, OpenShift API Logs
+* `auditd` is attributes that are present for Node auditd logs
+* `container`  is attributes that are present for Kubernetes Container logs (both application and infrastructure)
+* `ovn` is attributes that are present for OVN Logs
+* `journal` is attributes that are present for Node journal logs
 
 ### Attributes vs. Structured Logs
 
