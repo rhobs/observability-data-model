@@ -87,7 +87,7 @@ The "Storage" column shows whether the attribute is stored into a LokiStack usin
 | `process.command_line` | resource | journal | structured metadata | |
 | `process.pid` | resource | journal | structured metadata | |
 | `service.name` | resource | journal | stream label | |
-| `k8s.ovn.component` | resource | ovn | stream label | |
+| `k8s.ovn.component` | log | ovn | stream label | |
 | `auditd.type` | log | auditd | structured metadata | The type of auditd event (e.g., `SYSCALL`, `PROCTITLE`) |
 
 **Note:** Attributes marked as "Compatibility attribute" are added to support minimal backwards compatibility with the [ViaQ](https://github.com/openshift/cluster-logging-operator/blob/release-6.0/docs/reference/datamodels/viaq/v1.adoc) data model. These attributes should be considered deprecated and will be removed one release after **General Acceptance** of Red Hat OpenShift Logging.
